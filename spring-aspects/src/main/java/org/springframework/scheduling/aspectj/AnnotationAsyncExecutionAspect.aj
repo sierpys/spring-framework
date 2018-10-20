@@ -65,6 +65,7 @@ public aspect AnnotationAsyncExecutionAspect extends AbstractAsyncExecutionAspec
 	 * @see #determineAsyncExecutor(Method)
 	 */
 	@Override
+//	async(value = "")指定线程池
 	protected String getExecutorQualifier(Method method) {
 		// Maintainer's note: changes made here should also be made in
 		// AnnotationAsyncExecutionInterceptor#getExecutorQualifier

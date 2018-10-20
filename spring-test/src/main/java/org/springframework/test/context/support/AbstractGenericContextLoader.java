@@ -104,6 +104,7 @@ public abstract class AbstractGenericContextLoader extends AbstractContextLoader
 	 * @since 3.1
 	 */
 	@Override
+//	重点：spring项目的入口
 	public final ConfigurableApplicationContext loadContext(MergedContextConfiguration mergedConfig) throws Exception {
 		if (logger.isDebugEnabled()) {
 			logger.debug(String.format("Loading ApplicationContext for merged context configuration [%s].",

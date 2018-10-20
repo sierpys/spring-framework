@@ -98,6 +98,7 @@ public abstract class AbstractDelegatingSmartContextLoader implements SmartConte
 		loader.processContextConfiguration(configAttributes);
 	}
 
+//	重点 smartcontextloader
 	private static ApplicationContext delegateLoading(SmartContextLoader loader, MergedContextConfiguration mergedConfig)
 			throws Exception {
 

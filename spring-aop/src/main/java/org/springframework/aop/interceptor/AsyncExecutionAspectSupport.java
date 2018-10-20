@@ -161,13 +161,16 @@ public abstract class AsyncExecutionAspectSupport implements BeanFactoryAware {
 	 */
 	@Nullable
 	protected AsyncTaskExecutor determineAsyncExecutor(Method method) {
+//		使用缓存
 		AsyncTaskExecutor executor = this.executors.get(method);
 		if (executor == null) {
 			Executor targetExecutor;
+//			获取指定线程池
 			String qualifier = getExecutorQualifier(method);
 			if (StringUtils.hasLength(qualifier)) {
 				targetExecutor = findQualifiedExecutor(this.beanFactory, qualifier);
 			}
+//			如果没有则找default
 			else {
 				targetExecutor = this.defaultExecutor.get();
 			}
@@ -224,6 +227,7 @@ public abstract class AsyncExecutionAspectSupport implements BeanFactoryAware {
 	 * @see #DEFAULT_TASK_EXECUTOR_BEAN_NAME
 	 */
 	@Nullable
+//	获取默认的线程池
 	protected Executor getDefaultExecutor(@Nullable BeanFactory beanFactory) {
 		if (beanFactory != null) {
 			try {
@@ -269,6 +273,7 @@ public abstract class AsyncExecutionAspectSupport implements BeanFactoryAware {
 	 * @return the execution result (potentially a corresponding {@link Future} handle)
 	 */
 	@Nullable
+//	提交任务到线程池
 	protected Object doSubmit(Callable<Object> task, AsyncTaskExecutor executor, Class<?> returnType) {
 		if (CompletableFuture.class.isAssignableFrom(returnType)) {
 			return CompletableFuture.supplyAsync(() -> {

@@ -288,6 +288,7 @@ public class ContextLoader {
 						ApplicationContext parent = loadParentContext(servletContext);
 						cwac.setParent(parent);
 					}
+//					重点：开始启动web application context
 					configureAndRefreshWebApplicationContext(cwac, servletContext);
 				}
 			}
@@ -383,6 +384,7 @@ public class ContextLoader {
 		}
 
 		wac.setServletContext(sc);
+//		获取配置的xml路径
 		String configLocationParam = sc.getInitParameter(CONFIG_LOCATION_PARAM);
 		if (configLocationParam != null) {
 			wac.setConfigLocation(configLocationParam);
@@ -397,6 +399,7 @@ public class ContextLoader {
 		}
 
 		customizeContext(sc, wac);
+//		重点：开始了整个bean初始化
 		wac.refresh();
 	}
 

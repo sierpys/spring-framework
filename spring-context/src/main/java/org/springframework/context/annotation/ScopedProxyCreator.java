@@ -28,6 +28,7 @@ import org.springframework.beans.factory.support.BeanDefinitionRegistry;
  * @since 3.0
  * @see org.springframework.aop.scope.ScopedProxyUtils#createScopedProxy
  */
+// AOP代理
 final class ScopedProxyCreator {
 
 	private ScopedProxyCreator() {

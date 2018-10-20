@@ -298,7 +298,7 @@ class ConfigurationClassParser {
 				}
 			}
 		}
-
+//  重点：解释了@Import的起源
 		// Process any @Import annotations
 		processImports(configClass, sourceClass, getImports(sourceClass), true);
 

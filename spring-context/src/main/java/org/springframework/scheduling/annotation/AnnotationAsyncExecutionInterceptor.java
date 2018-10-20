@@ -77,6 +77,7 @@ public class AnnotationAsyncExecutionInterceptor extends AsyncExecutionIntercept
 	 */
 	@Override
 	@Nullable
+//	确定async（value="")确定指定线程池
 	protected String getExecutorQualifier(Method method) {
 		// Maintainer's note: changes made here should also be made in
 		// AnnotationAsyncExecutionAspect#getExecutorQualifier

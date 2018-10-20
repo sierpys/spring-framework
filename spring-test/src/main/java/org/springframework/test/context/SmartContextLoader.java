@@ -70,6 +70,8 @@ import org.springframework.context.ApplicationContext;
  * @see ContextConfigurationAttributes
  * @see MergedContextConfiguration
  */
+
+// 重点：能够决定是从xml中读取calss 或者从 annotated class
 public interface SmartContextLoader extends ContextLoader {
 
 	/**

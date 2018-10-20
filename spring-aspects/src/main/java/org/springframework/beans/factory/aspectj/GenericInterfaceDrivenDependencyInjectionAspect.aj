@@ -48,7 +48,8 @@ public abstract aspect GenericInterfaceDrivenDependencyInjectionAspect<I> extend
 
 	public pointcut inConfigurableBean() : within(I+);
 
-	@SuppressWarnings("unchecked")
+	@Override
+    @SuppressWarnings("unchecked")
 	public final void configureBean(Object bean) {
 		configure((I) bean);
 	}
