@@ -129,6 +129,7 @@ public class EncodedUriTests {
 			return bean;
 		}
 
+		@Override
 		public int getOrder() {
 			return PriorityOrdered.HIGHEST_PRECEDENCE;
 		}

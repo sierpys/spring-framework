@@ -60,7 +60,7 @@ import org.springframework.util.ReflectionUtils;
  * @see BeanWrapper
  * @see PropertyEditorRegistrySupport
  */
-public class BeanWrapperImpl extends AbstractNestablePropertyAccessor implements BeanWrapper {
+public class     BeanWrapperImpl extends AbstractNestablePropertyAccessor implements BeanWrapper {
 
 	/**
 	 * Cached introspections results for this object, to prevent encountering

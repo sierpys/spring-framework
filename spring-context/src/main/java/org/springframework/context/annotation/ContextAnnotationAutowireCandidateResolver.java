@@ -44,6 +44,7 @@ import org.springframework.util.Assert;
  * @author Juergen Hoeller
  * @since 4.0
  */
+//解析lazy annotation
 public class ContextAnnotationAutowireCandidateResolver extends QualifierAnnotationAutowireCandidateResolver {
 
 	@Override

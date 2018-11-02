@@ -57,6 +57,9 @@ import org.springframework.util.StringUtils;
  * @see Qualifier
  * @see Value
  */
+//
+//	解析qualifer annotation
+//
 public class QualifierAnnotationAutowireCandidateResolver extends GenericTypeAwareAutowireCandidateResolver {
 
 	private final Set<Class<? extends Annotation>> qualifierTypes = new LinkedHashSet<>(2);
