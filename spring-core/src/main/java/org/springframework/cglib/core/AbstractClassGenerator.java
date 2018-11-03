@@ -243,8 +243,9 @@ abstract public class AbstractClassGenerator<T> implements ClassGenerator {
 	 * By default an instance of {@see DefaultGeneratorStrategy} is used.
 	 */
 	public void setStrategy(GeneratorStrategy strategy) {
-		if (strategy == null)
+		if (strategy == null) {
 			strategy = DefaultGeneratorStrategy.INSTANCE;
+		}
 		this.strategy = strategy;
 	}
 

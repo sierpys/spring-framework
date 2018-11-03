@@ -187,8 +187,11 @@ class CglibAopProxy implements AopProxy, Serializable {
 				}
 			}
 			enhancer.setSuperclass(proxySuperClass);
+//			是的所有的proxy实现SpringProxy && Advised && DecoratingProxy接口
 			enhancer.setInterfaces(AopProxyUtils.completeProxiedInterfaces(this.advised));
+//			生成的proxy命名规则
 			enhancer.setNamingPolicy(SpringNamingPolicy.INSTANCE);
+//
 			enhancer.setStrategy(new ClassLoaderAwareUndeclaredThrowableStrategy(classLoader));
 
 			Callback[] callbacks = getCallbacks(rootClass);

@@ -51,7 +51,7 @@ import org.springframework.web.context.support.StandardServletEnvironment;
  * its config parameters ({@code init-param} entries within the
  * {@code servlet} tag in {@code web.xml}) as bean properties.
  *
- * <p>A handy superclass for any type of servlet. Type conversion of config
+ * * <p>A handy superclass for any type of servlet. Type conversion of config
  * parameters is automatic, with the corresponding setter method getting
  * invoked with the converted value. It is also possible for subclasses to
  * specify required properties. Parameters without matching bean property
@@ -145,6 +145,8 @@ public abstract class HttpServletBean extends HttpServlet implements Environment
 	 * properties are missing), or if subclass initialization fails.
 	 */
 	@Override
+//	GenericServlet init
+//	spring框架入口
 	public final void init() throws ServletException {
 
 		// Set bean properties from init parameters.
@@ -166,6 +168,7 @@ public abstract class HttpServletBean extends HttpServlet implements Environment
 		}
 
 		// Let subclasses do whatever initialization they like.
+//		Frameworkservlet 入口
 		initServletBean();
 	}
 
