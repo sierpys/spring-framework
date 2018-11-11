@@ -29,6 +29,7 @@ import org.springframework.core.Ordered;
  * @author Stephane Nicoll
  * @since 4.2
  */
+// DefaultEventListenerFactory
 public class DefaultEventListenerFactory implements EventListenerFactory, Ordered {
 
 	private int order = LOWEST_PRECEDENCE;
@@ -42,6 +43,7 @@ public class DefaultEventListenerFactory implements EventListenerFactory, Ordere
 		this.order = order;
 	}
 
+	@Override
 	public boolean supportsMethod(Method method) {
 		return true;
 	}

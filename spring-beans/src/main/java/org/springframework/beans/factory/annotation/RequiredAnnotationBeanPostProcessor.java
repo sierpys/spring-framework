@@ -75,6 +75,7 @@ import org.springframework.util.Assert;
  * (or a custom {@link org.springframework.beans.factory.InitializingBean} implementation)
  */
 @Deprecated
+//针对 Required annotation.
 public class RequiredAnnotationBeanPostProcessor extends InstantiationAwareBeanPostProcessorAdapter
 		implements MergedBeanDefinitionPostProcessor, PriorityOrdered, BeanFactoryAware {
 

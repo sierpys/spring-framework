@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="80.0">org.springframework.beans.factory.support.DefaultBeanNameGenerator</node>
+    <node x="149.25" y="0.0">org.springframework.beans.factory.support.BeanNameGenerator</node>
+    <node x="242.0" y="80.0">org.springframework.context.annotation.AnnotationBeanNameGenerator</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.context.annotation.AnnotationBeanNameGenerator" target="org.springframework.beans.factory.support.BeanNameGenerator">
+      <point x="0.0" y="-15.0" />
+      <point x="365.5" y="55.0" />
+      <point x="282.75" y="55.0" />
+      <point x="44.5" y="15.0" />
+    </edge>
+    <edge source="org.springframework.beans.factory.support.DefaultBeanNameGenerator" target="org.springframework.beans.factory.support.BeanNameGenerator">
+      <point x="0.0" y="-15.0" />
+      <point x="111.0" y="55.0" />
+      <point x="193.75" y="55.0" />
+      <point x="-44.5" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="0.0" />
+  <SelectedNodes>
+    <node>org.springframework.beans.factory.support.DefaultBeanNameGenerator</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

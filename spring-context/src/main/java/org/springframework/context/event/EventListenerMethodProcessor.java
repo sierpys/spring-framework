@@ -52,6 +52,7 @@ import org.springframework.util.CollectionUtils;
  * @author Juergen Hoeller
  * @since 4.2
  */
+// 针对 eventlistener 
 public class EventListenerMethodProcessor implements SmartInitializingSingleton, ApplicationContextAware {
 
 	protected final Log logger = LogFactory.getLog(getClass());

@@ -23,6 +23,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
+import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -54,10 +55,10 @@ public class PropertyPlaceholderConfigurerTests {
 
 	@Before
 	public void setup() {
-		p1BeanDef = rootBeanDefinition(TestBean.class)
+		p1BeanDef = BeanDefinitionBuilder.rootBeanDefinition(TestBean.class)
 				.addPropertyValue("name", "${" + P1 + "}")
 				.getBeanDefinition();
-
+		
 		bf = new DefaultListableBeanFactory();
 
 		ppcProperties = new Properties();
@@ -78,7 +79,7 @@ public class PropertyPlaceholderConfigurerTests {
 	public void localPropertiesViaResource() {
 		DefaultListableBeanFactory bf = new DefaultListableBeanFactory();
 		bf.registerBeanDefinition("testBean",
-				genericBeanDefinition(TestBean.class)
+				BeanDefinitionBuilder.genericBeanDefinition(TestBean.class)
 					.addPropertyValue("name", "${my.name}")
 					.getBeanDefinition());
 
@@ -95,6 +96,8 @@ public class PropertyPlaceholderConfigurerTests {
 				.addPropertyValue("name", "${" + P1 + "}")
 				.addPropertyValue("sex", "${otherKey}")
 				.getBeanDefinition();
+
+
 		registerWithGeneratedName(p1BeanDef, bf);
 		ppc.postProcessBeanFactory(bf);
 		TestBean bean = bf.getBean(TestBean.class);

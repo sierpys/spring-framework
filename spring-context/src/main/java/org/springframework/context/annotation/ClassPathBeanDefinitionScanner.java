@@ -60,6 +60,8 @@ import org.springframework.util.PatternMatchUtils;
  * @see org.springframework.stereotype.Service
  * @see org.springframework.stereotype.Controller
  */
+//扫描类的
+//	类似于：BeanDefinitionDocumentReader
 public class ClassPathBeanDefinitionScanner extends ClassPathScanningCandidateComponentProvider {
 
 	private final BeanDefinitionRegistry registry;
